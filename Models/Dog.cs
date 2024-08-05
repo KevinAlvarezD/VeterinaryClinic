@@ -22,5 +22,11 @@ public class Dog : Animal
         BarkVolume = barkVolume;
         CoatType = coatType;
     }
-    
+
+    //metodos
+    public override void ShowInformation()
+    {
+        Console.WriteLine($"Dog: {Name}, Birth Date: {BirthDate}, Breed: {Breed}, Color: {Color}, Weight: {WeightInKg}kg, Breeding Status: {BreedingStatus}, Temperament: {Temperament}, Microchip Number: {MicrochipNumber}, Bark Volume: {BarkVolume}, Coat Type: {CoatType}");
+    }
+
 }

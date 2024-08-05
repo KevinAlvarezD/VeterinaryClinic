@@ -17,6 +17,12 @@ public class Cat: Animal
         FurLength = furLength;
     }
 
+    //metodos
+    public override void ShowInformation()
+    {
+        Console.WriteLine($"Cat: {Name}, Birth Date: {BirthDate}, Breed: {Breed}, Color: {Color}, Weight: {WeightInKg}kg, Breeding Status: {BreedingStatus}, Fur Length: {FurLength}");
+    }
+
     
 
 }
