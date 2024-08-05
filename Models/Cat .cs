@@ -10,6 +10,13 @@ public class Cat: Animal
     public bool BreedingStatus { get; set; }
     public string FurLength { get; set; }
 
+    // constructor
+    public Cat(string name, DateOnly birthDate, string breed, string color, double weightInKg, bool breedingStatus, string furLength) : base(name, birthDate, breed, color, weightInKg)
+    {
+        BreedingStatus = breedingStatus;
+        FurLength = furLength;
+    }
+
     
 
 }
