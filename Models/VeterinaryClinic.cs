@@ -76,7 +76,6 @@ public class VeterinaryClinic
     };
 
     //metodos 
-
     public void SaveDog(Dog newDog){
         Dogs.Add(newDog);
     }
