@@ -243,13 +243,26 @@ public class VeterinaryClinic
         string animalName = Console.ReadLine();
         Dog dogToShow = Dogs.FirstOrDefault(d => d.NamePublic() == animalName);
         Cat catToShow = Cats.FirstOrDefault(c => c.NamePublic() == animalName);
-
         if(dogToShow!= null){
-            Console.WriteLine(dogToShow.ToString());
-        } else if(catToShow!= null){
-            Console.WriteLine(catToShow.ToString());
-        } else {
-            Console.WriteLine("No se encontró el animal");
+            Console.WriteLine($"Nombre: {dogToShow.NamePublic()}");
+            Console.WriteLine($"Fecha de nacimiento: {dogToShow.BirthDatePublic().ToString("yyyy-MM-dd")}");
+            Console.WriteLine($"Raza: {dogToShow.BreedPublic()}");
+            Console.WriteLine($"Color: {dogToShow.ColorPublic}");
+            Console.WriteLine($"Peso: {dogToShow.WeightInKgPublic} kg");
+            Console.WriteLine($"Castración: {dogToShow.BreedingStatus}");
+            Console.WriteLine($"Temperamento: {dogToShow.Temperament}");
+            Console.WriteLine($"Microchip: {dogToShow.MicrochipNumber}");
+            Console.WriteLine($"Volumen de ruido de ladrido: {dogToShow.BarkVolume}");
+            Console.WriteLine($"Tipo de pelo: {dogToShow.CoatType}");
+        }
+        else if(catToShow!= null){
+            Console.WriteLine($"Nombre: {catToShow.NamePublic()}");
+            Console.WriteLine($"Fecha de nacimiento: {catToShow.BirthDatePublic().ToString("yyyy-MM-dd")}");
+            Console.WriteLine($"Raza: {catToShow.BreedPublic()}");
+            Console.WriteLine($"Color: {catToShow.ColorPublic}");
+            Console.WriteLine($"Peso: {catToShow.WeightInKgPublic} kg");
+            Console.WriteLine($"Castración: {catToShow.BreedingStatus}");
+            Console.WriteLine($"Tamaño del pelaje: {catToShow.FurLength}");
         }
     }
 
