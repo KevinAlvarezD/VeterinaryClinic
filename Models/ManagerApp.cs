@@ -36,7 +36,7 @@ public class ManagerApp
         Dog newDog = new Dog(name, birthDate, breed, color, weightInKg, breedingStatus, temperament, microchipNumber, coatType, furLength);
         //agregar el perro a la clinica
         VeterinaryClinic clinic = new VeterinaryClinic("Clinica Veterinaria XYZ", "Calle 123, Colonia YZ, CP 12345");
-        clinic.Dogs.Add(newDog);   
+        clinic.SaveDog(newDog);   
     }
     public void CreateCat(){
         //pedir al usuario la informacion
@@ -59,7 +59,7 @@ public class ManagerApp
         Cat newCat = new Cat(name, birthDate, breed, color, weightInKg, breedingStatus, furLength);
         //agregar el gato a la clinica
         VeterinaryClinic clinic = new VeterinaryClinic("Clinica Veterinaria XYZ", "Calle 123, Colonia YZ, CP 12345");
-        clinic.Cats.Add(newCat);
+        clinic.SaveCat(newCat);
        
     }
 

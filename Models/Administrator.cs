@@ -16,7 +16,7 @@ public class Administrator
             Console.WriteLine("===============================================");
             Console.WriteLine("                 Veterinary Center              ");
             Console.WriteLine("===============================================");
-            Console.WriteLine("| 1.               |");
+            Console.WriteLine("| 1.Mostrar todos los animales                 |");
             Console.WriteLine("| 2.                        |");
             Console.WriteLine("| 3.       |");
             Console.WriteLine("| 4.                       |");
@@ -33,6 +33,7 @@ public class Administrator
             switch (option)
             {
                 case 1: 
+                VeterinaryClinic.ShowAnimals();
                                      
                     break;
                 case 2:

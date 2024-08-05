@@ -11,7 +11,7 @@ public class VeterinaryClinic
     public string Address { get; set; }
 
     //constructor
-    public VeterinaryClinic(string name, string address)
+    public  VeterinaryClinic(string name, string address)
     {
         Name = name;
         Address = address;
