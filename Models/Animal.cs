@@ -26,6 +26,24 @@ public abstract class Animal
         WeightInKg = weightInKg;
     }
 
+    //metodos
+    public abstract void ShowInformation();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    //Metodo de get y set para usar atributos protected en otros archivos
     public int IdPublic()
     {
