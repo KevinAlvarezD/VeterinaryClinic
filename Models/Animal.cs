@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VeterinaryCenter.Models;
 
-public class Animal
+public abstract class Animal
 {
     protected int Id { get; set; }
     protected string Name { get; set; }
