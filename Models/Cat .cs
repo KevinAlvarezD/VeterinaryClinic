@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VeterinaryCenter.Models;
 
-public class Cat
+public class Cat: Animal
 {
     public bool BreedingStatus { get; set; }
     public string FurLength { get; set; }
