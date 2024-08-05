@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace VeterinaryCenter.Models;
-
 public class ManagerApp
 {
     public static void CreateDog(){

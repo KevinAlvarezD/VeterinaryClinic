@@ -50,6 +50,5 @@ public class Cat: Animal
         Thread.Sleep(5000);
     }
 
-    
 
 }

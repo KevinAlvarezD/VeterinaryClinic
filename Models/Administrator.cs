@@ -125,6 +125,7 @@ public class Administrator
                      break;
                 case 8:
                 VeterinaryClinic.ShowPatient();
+                Thread.Sleep(6000);
                      break;  
                 case 9:
                 ManagerApp.ShowHeader(); 
