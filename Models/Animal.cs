@@ -29,6 +29,18 @@ public abstract class Animal
     //metodos
     public abstract void ShowInformation();
 
+    public void BasicReview(){
+        Console.WriteLine($"Animal: {Name}, Birth Date: {BirthDate}, Breed: {Breed}, Color: {Color}, Weight: {WeightInKg}kg");
+    }
+
+    public int CalculateAgeInMonths(){
+        int ageInMonths = (DateTime.Today.Year - BirthDatePublic().Year) * 12 + DateTime.Today.Month - BirthDatePublic().Month;
+        if (DateTime.Today.Day < BirthDatePublic().Day) ageInMonths--;
+        Console.WriteLine($"La mascota tiene {ageInMonths} meses de edad");
+        return ageInMonths;
+        
+    }
+
 
 
 
