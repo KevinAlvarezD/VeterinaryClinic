@@ -41,21 +41,6 @@ public abstract class Animal
         
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    //Metodo de get y set para usar atributos protected en otros archivos
     public int IdPublic()
     {
