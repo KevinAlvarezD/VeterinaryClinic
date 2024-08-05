@@ -62,7 +62,6 @@ public class ManagerApp
         clinic.SaveCat(newCat);
        
     }
-
     public static void ShowHeader(){
         Console.WriteLine("==================================================================================================");
         Console.WriteLine("Clinica Veterinaria XYZ - Reporte de Estadisticas");
