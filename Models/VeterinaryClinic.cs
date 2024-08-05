@@ -17,7 +17,7 @@ public class VeterinaryClinic
         Address = address;
     }
 
-    public List<Dog> Dogs { get; set; } = new List<Dog>{
+    public static List<Dog> Dogs { get; set; } = new List<Dog>{
         // initialize some sample dogs
         new Dog("Buddy",
         new DateOnly(2010, 5, 15), 
@@ -50,7 +50,7 @@ public class VeterinaryClinic
         "Short",
         "Medium")
     };
-    public List<Cat> Cats { get; set; } = new List<Cat>{
+    public static List<Cat> Cats { get; set; } = new List<Cat>{
         // initialize some sample cats
         new Cat("Whiskers",
         new DateOnly(2012, 7, 10),
@@ -85,7 +85,7 @@ public class VeterinaryClinic
         Cats.Add(newCat);
     }
 
-    public void UpdateDog(Dog dog){
+    public static void UpdateDog(Dog dog){
         Console.WriteLine("Cual es el nombre de tu perro");
         string newName = Console.ReadLine();
         Console.WriteLine("Que campo deseas actualizar?");
@@ -140,7 +140,7 @@ public class VeterinaryClinic
         Console.WriteLine($"El perro {dog.NamePublic} ha sido actualizado con éxito");
     }
 
-    public void UpdateCat(Cat cat){
+    public static void UpdateCat(Cat cat){
         Console.WriteLine("Cual es el nombre de tu gato");
         string newName = Console.ReadLine();
         Console.WriteLine("Que campo deseas actualizar?");
@@ -182,5 +182,34 @@ public class VeterinaryClinic
         }    
                 
     }
+
+    public static void DeleteDog(Dog dog){
+        Console.WriteLine("Ingrese el nombre del perro a eliminar");
+        string dogName = Console.ReadLine();
+        Dog dogToRemove = Dogs.FirstOrDefault(d => d.NamePublic() == dogName);
+        Console.WriteLine($"¿Estás seguro de eliminar el perro {dogToRemove.NamePublic()}?");
+        string confirmation = Console.ReadLine();
+        if(confirmation.ToLower() == "si"){
+            Dogs.Remove(dogToRemove);
+        } else {
+            Console.WriteLine("El perro no ha sido eliminado");
+        }
+        Console.WriteLine($"El perro {dogToRemove.NamePublic()} ha sido eliminado con éxito");
+    }
+
+    public static void DeleteCat(Cat cat){
+        Console.WriteLine("Ingrese el nombre del gato a eliminar");
+        string catName = Console.ReadLine();
+        Cat catToRemove = Cats.FirstOrDefault(c => c.NamePublic() == catName);
+        Console.WriteLine($"¿Estás seguro de eliminar el gato {catToRemove.NamePublic()}?");
+        string confirmation = Console.ReadLine();
+        if(confirmation.ToLower() == "si"){
+            Cats.Remove(catToRemove);
+        } else {
+            Console.WriteLine("El gato no ha sido eliminado");
+        }
+        Console.WriteLine($"El gato {catToRemove.NamePublic()} ha sido eliminado con éxito");
+    }    
+        
 
 }
