@@ -7,7 +7,6 @@ namespace VeterinaryCenter.Models;
 
 public class ManagerApp
 {
-    //Esta clase va a crear un nuevo dog y un nuevo cat
     public static void CreateDog(){
         //pedir al usuario la informacion
         Console.WriteLine("Ingrese el nombre del perro:");
@@ -70,7 +69,6 @@ public class ManagerApp
         Console.WriteLine("Hora: " + DateTime.Now.ToString("HH:mm:ss"));
         Console.WriteLine("--------------------------------------------------------------------------------------------------");
     }
-
     public static void ShowFooter(){
     
         Console.WriteLine("--------------------------------------------------------------------------------------------------");
@@ -80,7 +78,6 @@ public class ManagerApp
         Console.WriteLine("Fin del Reporte");
         Console.WriteLine("==================================================================================================");
     }
-
     public static void ShowSeparator(){
         Console.WriteLine("--------------------------------------------------------------------------------------------------");
     }
