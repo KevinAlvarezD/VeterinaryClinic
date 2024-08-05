@@ -15,7 +15,6 @@ public abstract class Animal
     protected string Breed { get; set; }
     protected string Color { get; set; }
     protected double WeightInKg { get; set; }
-
     //constructor
     public Animal(string name, DateOnly birthDate, string breed, string color, double weightInKg)
     {

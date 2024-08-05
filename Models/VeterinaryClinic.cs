@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace VeterinaryCenter.Models;
-
 public class VeterinaryClinic
 {
     public  string Name { get; set; }
@@ -74,7 +73,6 @@ public class VeterinaryClinic
         true,
         "Medium")
     };
-
     //metodos 
     public void SaveDog(Dog newDog){
         Dogs.Add(newDog);
