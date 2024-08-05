@@ -29,4 +29,20 @@ public class Dog : Animal
         Console.WriteLine($"Dog: {Name}, Birth Date: {BirthDate}, Breed: {Breed}, Color: {Color}, Weight: {WeightInKg}kg, Breeding Status: {BreedingStatus}, Temperament: {Temperament}, Microchip Number: {MicrochipNumber}, Bark Volume: {BarkVolume}, Coat Type: {CoatType}");
     }
 
+    public void CastrateAnimal(){
+        if (BreedingStatus)
+        {
+            Console.WriteLine($"{Name} is already castrated.");
+        }
+        else
+        {
+            Console.WriteLine($"{Name} is being castrated.");
+            BreedingStatus = true;
+        }
+    }
+
+    public void HairDress(){
+        Console.WriteLine($"{Name} is being hair dressed.");
+    }
+
 }
