@@ -133,7 +133,6 @@ public class Administrator
                 case 10:
                 ManagerApp.ShowFooter(); 
                 Thread.Sleep(4000);
-
                 break;      
                 case 11:
                      Console.WriteLine("Gracias por usar nuestro sistema. Adiós...");
