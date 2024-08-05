@@ -26,4 +26,33 @@ public abstract class Animal
         WeightInKg = weightInKg;
     }
 
+   //Metodo de get y set para usar atributos protected en otros archivos
+    public int IdPublic()
+    {
+        return Id;
+    }
+    public string NamePublic()
+    {
+        return Name;
+    }
+    public DateOnly BirthDatePublic()
+    {
+        return BirthDate;
+    }
+    public string BreedPublic()
+    {
+        return Breed;
+    }
+    public string ColorPublic()
+    {
+        return Color;
+    }
+    public double WeightInKgPublic()
+    {
+        return WeightInKg;
+    }
+  
+   
+
+
 }
