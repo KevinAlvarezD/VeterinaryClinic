@@ -42,7 +42,15 @@ public class Dog : Animal
     }
 
     public void HairDress(){
-        Console.WriteLine($"{Name} is being hair dressed.");
+        //si el perro tiene el pelo short no se puede motilar
+        if (CoatType == "Short")
+        {
+            Console.WriteLine($"{Name} has short coat, cannot be hair dressed.");
+        }
+        else
+        {
+            Console.WriteLine($"{Name} is being hair dressed.");
+        }
     }
 
 }
