@@ -67,7 +67,23 @@ public abstract class Animal
         return WeightInKg;
     }
   
-   
+   //metodos para actualizar 
+    public void UpdateName(string newName){
+        Name = newName;
+    }
+    public void UpdateBirthDate(DateOnly newBirthDate){
+        BirthDate = newBirthDate;
+    }
+    public void UpdateBreed(string newBreed){
+        Breed = newBreed;
+    }
+    public void UpdateColor(string newColor){
+        Color = newColor;
+    }
+    public void UpdateWeightInKg(double newWeightInKg){
+        WeightInKg = newWeightInKg;
+    }
+    
 
 
 }

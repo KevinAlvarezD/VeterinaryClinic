@@ -38,8 +38,6 @@ public class ManagerApp
         VeterinaryClinic clinic = new VeterinaryClinic("Clinica Veterinaria XYZ", "Calle 123, Colonia YZ, CP 12345");
         clinic.Dogs.Add(newDog);   
     }
-
-
     public void CreateCat(){
         //pedir al usuario la informacion
         Console.WriteLine("Ingrese el nombre del gato:");
