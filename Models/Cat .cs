@@ -23,6 +23,22 @@ public class Cat: Animal
         Console.WriteLine($"Cat: {Name}, Birth Date: {BirthDate}, Breed: {Breed}, Color: {Color}, Weight: {WeightInKg}kg, Breeding Status: {BreedingStatus}, Fur Length: {FurLength}");
     }
 
+    public void CastrateAnimal(){
+        if (BreedingStatus)
+        {
+            Console.WriteLine($"{Name} is already castrated.");
+        }
+        else
+        {
+            Console.WriteLine($"{Name} is being castrated.");
+            BreedingStatus = true;
+        }
+    }
+
+    public void HairDress(){
+        Console.WriteLine($"{Name} is being hair dressed.");
+    }
+
     
 
 }
