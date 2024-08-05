@@ -22,4 +22,5 @@ public class Dog : Animal
         BarkVolume = barkVolume;
         CoatType = coatType;
     }
+    
 }
