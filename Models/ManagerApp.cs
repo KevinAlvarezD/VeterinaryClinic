@@ -8,7 +8,7 @@ namespace VeterinaryCenter.Models;
 public class ManagerApp
 {
     //Esta clase va a crear un nuevo dog y un nuevo cat
-    public void CreateDog(){
+    public static void CreateDog(){
         //pedir al usuario la informacion
         Console.WriteLine("Ingrese el nombre del perro:");
         string name = Console.ReadLine();
@@ -38,7 +38,7 @@ public class ManagerApp
         VeterinaryClinic clinic = new VeterinaryClinic("Clinica Veterinaria XYZ", "Calle 123, Colonia YZ, CP 12345");
         clinic.SaveDog(newDog);   
     }
-    public void CreateCat(){
+    public static void CreateCat(){
         //pedir al usuario la informacion
         Console.WriteLine("Ingrese el nombre del gato:");
         string name = Console.ReadLine();
@@ -61,6 +61,29 @@ public class ManagerApp
         VeterinaryClinic clinic = new VeterinaryClinic("Clinica Veterinaria XYZ", "Calle 123, Colonia YZ, CP 12345");
         clinic.SaveCat(newCat);
        
+    }
+
+    public static void ShowHeader(){
+        Console.WriteLine("==================================================================================================");
+        Console.WriteLine("Clinica Veterinaria XYZ - Reporte de Estadisticas");
+        Console.WriteLine("==================================================================================================");
+        Console.WriteLine("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy"));
+        Console.WriteLine("Hora: " + DateTime.Now.ToString("HH:mm:ss"));
+        Console.WriteLine("--------------------------------------------------------------------------------------------------");
+    }
+
+    public static void ShowFooter(){
+    
+        Console.WriteLine("--------------------------------------------------------------------------------------------------");
+        Console.WriteLine("Autor: Kevin Àlvarez Dìaz");
+        Console.WriteLine("Fecha: " + DateTime.Now.ToString("dd/MM/yy"));
+        Console.WriteLine("Ubicacion: Riwi/CC- De moda");
+        Console.WriteLine("Fin del Reporte");
+        Console.WriteLine("==================================================================================================");
+    }
+
+    public static void ShowSeparator(){
+        Console.WriteLine("--------------------------------------------------------------------------------------------------");
     }
 
 }

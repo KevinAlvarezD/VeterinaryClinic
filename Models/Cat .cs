@@ -38,6 +38,20 @@ public class Cat: Animal
     public void HairDress(){
         Console.WriteLine($"{Name} is being hair dressed.");
     }
+    public static List<Cat> cats = new List<Cat>{
+        new Cat("Whiskers", new DateOnly(2021, 1, 1), "Persa", "Black", 2.5, false, "Long"),
+        new Cat("Max", new DateOnly(2020, 6, 15), "Maine Coon", "White", 3.0, true, "Short"),
+        new Cat("Momo", new DateOnly(2019, 9, 20), "Siamese", "Gray", 2.8, false, "Medium")
+    };
+
+     public static void ShowInfo (){
+        Console.WriteLine("Cats:");
+        foreach (var cat in cats)
+        {
+            cat.ShowInformation();
+        }
+        Thread.Sleep(5000);
+    }
 
     
 

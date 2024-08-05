@@ -7,7 +7,7 @@ namespace VeterinaryCenter.Models;
 
 public class VeterinaryClinic
 {
-    public string Name { get; set; }
+    public  string Name { get; set; }
     public string Address { get; set; }
 
     //constructor
@@ -84,11 +84,12 @@ public class VeterinaryClinic
         Cats.Add(newCat);
     }
 
-    public static void UpdateDog(Dog dog){
+    public static void UpdateDog(){
         Console.WriteLine("Cual es el nombre de tu perro");
         string newName = Console.ReadLine();
         Console.WriteLine("Que campo deseas actualizar?");
         string fieldToUpdate = Console.ReadLine();
+        Dog dog = Dogs.FirstOrDefault(d => d.NamePublic() == newName);
         switch (fieldToUpdate)
         {
             case "Name":
@@ -139,11 +140,12 @@ public class VeterinaryClinic
         Console.WriteLine($"El perro {dog.NamePublic} ha sido actualizado con éxito");
     }
 
-    public static void UpdateCat(Cat cat){
+    public static void UpdateCat(){
         Console.WriteLine("Cual es el nombre de tu gato");
         string newName = Console.ReadLine();
         Console.WriteLine("Que campo deseas actualizar?");
         string fieldToUpdate = Console.ReadLine();
+        Cat cat = Cats.FirstOrDefault(c => c.NamePublic() == newName);
         switch (fieldToUpdate)
         {
             case "Name":
@@ -182,7 +184,7 @@ public class VeterinaryClinic
                 
     }
 
-    public static void DeleteDog(Dog dog){
+    public static void DeleteDog(){
         Console.WriteLine("Ingrese el nombre del perro a eliminar");
         string dogName = Console.ReadLine();
         Dog dogToRemove = Dogs.FirstOrDefault(d => d.NamePublic() == dogName);
@@ -196,7 +198,7 @@ public class VeterinaryClinic
         Console.WriteLine($"El perro {dogToRemove.NamePublic()} ha sido eliminado con éxito");
     }
 
-    public static void DeleteCat(Cat cat){
+    public static void DeleteCat(){
         Console.WriteLine("Ingrese el nombre del gato a eliminar");
         string catName = Console.ReadLine();
         Cat catToRemove = Cats.FirstOrDefault(c => c.NamePublic() == catName);
@@ -211,16 +213,16 @@ public class VeterinaryClinic
     }
 
     public static void ShowAllPatients() {
-        Console.WriteLine("Perros:");
         foreach (var dog in Dogs)
         {
-            Console.WriteLine(dog.ToString());
+            Console.WriteLine(dog.NamePublic());
         }
-        Console.WriteLine("Gatos:");
         foreach (var cat in Cats)
         {
-            Console.WriteLine(cat.ToString());
+            Console.WriteLine(cat.NamePublic());
         }
+        
+   
     }
 
     public static void ShowAnimals(){
@@ -228,33 +230,32 @@ public class VeterinaryClinic
         foreach (var dog in Dogs)
         {
             Console.WriteLine(dog.NamePublic());
+            Console.WriteLine("====================================");
         }
         Console.WriteLine("Gatos:");
         foreach (var cat in Cats)
         {
             Console.WriteLine(cat.NamePublic());
+            Console.WriteLine("====================================");
         }
     }
 
-    public static void ShowPatient(int idPatient){
-        Console.WriteLine("Perros:");
+    public static void ShowPatient(){
+        Console.WriteLine("Cual es el nombre del perro o gato?");
+        string animalName = Console.ReadLine();
+        Dog dogToShow = Dogs.FirstOrDefault(d => d.NamePublic() == animalName);
+        Cat catToShow = Cats.FirstOrDefault(c => c.NamePublic() == animalName);
 
-        Dog dog = Dogs.FirstOrDefault(d => d.IdPublic() == idPatient);
-        if(dog!= null){
-            Console.WriteLine(dog.ToString());
+        if(dogToShow!= null){
+            Console.WriteLine(dogToShow.ToString());
+        } else if(catToShow!= null){
+            Console.WriteLine(catToShow.ToString());
         } else {
-            Console.WriteLine("No se encontró el perro con el ID ingresado");
-        }
-        Console.WriteLine("Gatos:");
-        Cat cat = Cats.FirstOrDefault(c => c.IdPublic() == idPatient);
-        if(dog!= null){
-            Console.WriteLine(dog.ToString());
-        } else if(cat!= null){
-            Console.WriteLine(cat.ToString());
-        } else {
-            Console.WriteLine("No se encontró el paciente con el ID ingresado");
+            Console.WriteLine("No se encontró el animal");
         }
     }
-        
 
+   
+
+   
 }
