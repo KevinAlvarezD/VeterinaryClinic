@@ -25,10 +25,8 @@ public abstract class Animal
         Color = color;
         WeightInKg = weightInKg;
     }
-
     //metodos
     public abstract void ShowInformation();
-
     public void BasicReview(){
         Console.WriteLine($"Animal: {Name}, Birth Date: {BirthDate}, Breed: {Breed}, Color: {Color}, Weight: {WeightInKg}kg");
     }
@@ -40,7 +38,6 @@ public abstract class Animal
         return ageInMonths;
         
     }
-
    //Metodo de get y set para usar atributos protected en otros archivos
     public int IdPublic()
     {
@@ -83,7 +80,7 @@ public abstract class Animal
     public void UpdateWeightInKg(double newWeightInKg){
         WeightInKg = newWeightInKg;
     }
-    
+
 
 
 }
