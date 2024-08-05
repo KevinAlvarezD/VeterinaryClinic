@@ -209,7 +209,53 @@ public class VeterinaryClinic
             Console.WriteLine("El gato no ha sido eliminado");
         }
         Console.WriteLine($"El gato {catToRemove.NamePublic()} ha sido eliminado con éxito");
-    }    
+    }
+
+    public static void ShowAllPatients() {
+        Console.WriteLine("Perros:");
+        foreach (var dog in Dogs)
+        {
+            Console.WriteLine(dog.ToString());
+        }
+        Console.WriteLine("Gatos:");
+        foreach (var cat in Cats)
+        {
+            Console.WriteLine(cat.ToString());
+        }
+    }
+
+    public static void ShowAnimals(){
+        Console.WriteLine("Perros:");
+        foreach (var dog in Dogs)
+        {
+            Console.WriteLine(dog.NamePublic());
+        }
+        Console.WriteLine("Gatos:");
+        foreach (var cat in Cats)
+        {
+            Console.WriteLine(cat.NamePublic());
+        }
+    }
+
+    public static void ShowPatient(int idPatient){
+        Console.WriteLine("Perros:");
+
+        Dog dog = Dogs.FirstOrDefault(d => d.IdPublic() == idPatient);
+        if(dog!= null){
+            Console.WriteLine(dog.ToString());
+        } else {
+            Console.WriteLine("No se encontró el perro con el ID ingresado");
+        }
+        Console.WriteLine("Gatos:");
+        Cat cat = Cats.FirstOrDefault(c => c.IdPublic() == idPatient);
+        if(dog!= null){
+            Console.WriteLine(dog.ToString());
+        } else if(cat!= null){
+            Console.WriteLine(cat.ToString());
+        } else {
+            Console.WriteLine("No se encontró el paciente con el ID ingresado");
+        }
+    }
         
 
 }
